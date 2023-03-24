@@ -17,10 +17,12 @@
         .container{
         background-color: #F9ED69;
         border-radius:30px;
+        min-width:350px;
         max-width:550px;
 
         padding:10px;
         max-height:600px;
+        z-index:100;
 
 
 
@@ -33,6 +35,7 @@
         margin:10px;
         border-bottom:2px solid black;
         padding-bottom:5px;
+        position:relative;
         }
         .delete-link{
         }
@@ -51,7 +54,9 @@
         width:30px;
         border-radius:50%;
         background-color:gray;
-        position:fixed;
+        position:absolute;
+        left:0px;
+
         }
         #task-text{
         text-decoration:none;
@@ -63,11 +68,14 @@
         width:30px;
         border-radius:50%;
         background-color:green;
-        position:fixed;}
+        position:absolute;
+        left:0px;
+        }
 
         .todos{
         max-height:300px;
         overflow:scroll;
+        overflow-x:hidden;
 
         margin:10px 5px;
 
@@ -114,6 +122,7 @@
         display:flex;
         flex-direction:column;
         align-items:center;
+        z-index:50;
         }
         .search-add{
         display:flex;
@@ -144,7 +153,21 @@
         background-color:aqua;
         font-weight:900;
         color:Black;
+        background-color:#B83B5E;
+
         }
+        ::-webkit-scrollbar{
+        width:1rem;}
+        ::-webkit-scrollbar-track{
+        background-color:#B83B5E;
+        border-radius:0.5rem;
+        }
+        ::-webkit-scrollbar-thumb{
+        width:1rem;
+        border-radius:10px;
+        border:2px solid #B83B5E;
+        background-color:#F9ED69;}
+
 
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
