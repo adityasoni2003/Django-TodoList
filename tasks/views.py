@@ -52,7 +52,7 @@ class TaskList(LoginRequiredMixin,ListView):
 
         if search_input != "":
 
-            context['task'] = context['tasks'].filter(title__contains=search_input)
+            context['tasks'] = context['tasks'].filter(title__icontains=search_input)
         context['search_input'] = search_input
         return context
 
